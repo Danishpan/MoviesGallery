@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImagesCVCell" id="gTV-IL-0wX" customClass="ImagesCVCell" customModule="ViperApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSA-JV-h20">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLi-Bc-8NJ">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="aaI-yp-w3h"/>
+                                    <constraint firstAttribute="width" constant="300" id="fP6-IC-suz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aLi-Bc-8NJ" firstAttribute="leading" secondItem="nSA-JV-h20" secondAttribute="leading" id="5x5-D8-ytB"/>
+                            <constraint firstItem="aLi-Bc-8NJ" firstAttribute="top" secondItem="nSA-JV-h20" secondAttribute="top" id="HFd-s0-0Pf"/>
+                            <constraint firstAttribute="trailing" secondItem="aLi-Bc-8NJ" secondAttribute="trailing" id="aDK-Rd-4x6"/>
+                            <constraint firstAttribute="bottom" secondItem="aLi-Bc-8NJ" secondAttribute="bottom" id="xLs-Uo-Cnx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="nSA-JV-h20" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0WX-Ru-TgB"/>
+                <constraint firstAttribute="bottom" secondItem="nSA-JV-h20" secondAttribute="bottom" id="aOe-xX-T6E"/>
+                <constraint firstItem="nSA-JV-h20" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dbO-r0-a2A"/>
+                <constraint firstAttribute="trailing" secondItem="nSA-JV-h20" secondAttribute="trailing" id="ms9-Yl-U6Z"/>
+            </constraints>
+            <size key="customSize" width="301" height="169"/>
+            <connections>
+                <outlet property="cellView" destination="nSA-JV-h20" id="xPF-2y-0hr"/>
+                <outlet property="imageView" destination="aLi-Bc-8NJ" id="TKK-lO-wtX"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="110.49107142857143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

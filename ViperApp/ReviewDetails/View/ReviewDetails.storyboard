@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="ReviewDetailsViewController" title="Review" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="ReviewDetailsViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhm-Lc-ja7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="112"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u20-9c-OId">
+                                        <rect key="frame" x="16" y="16" width="80" height="80"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="6L9-5h-cFz"/>
+                                            <constraint firstAttribute="height" constant="80" id="kWl-62-3rC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxQ-jA-laL">
+                                        <rect key="frame" x="104" y="45.5" width="302" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="oxQ-jA-laL" firstAttribute="leading" secondItem="u20-9c-OId" secondAttribute="trailing" constant="8" id="Icn-Fq-XPd"/>
+                                    <constraint firstItem="oxQ-jA-laL" firstAttribute="centerY" secondItem="Mhm-Lc-ja7" secondAttribute="centerY" id="ONI-gM-Kg6"/>
+                                    <constraint firstItem="u20-9c-OId" firstAttribute="leading" secondItem="Mhm-Lc-ja7" secondAttribute="leading" constant="16" id="Ta3-ZS-NWS"/>
+                                    <constraint firstItem="u20-9c-OId" firstAttribute="top" secondItem="Mhm-Lc-ja7" secondAttribute="top" constant="16" id="dsf-EY-uLF"/>
+                                    <constraint firstAttribute="trailing" secondItem="oxQ-jA-laL" secondAttribute="trailing" constant="8" id="qfK-e5-VWQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="u20-9c-OId" secondAttribute="bottom" constant="16" id="rlv-VP-MBC"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JV-gq-gKs">
+                                <rect key="frame" x="16" y="172" width="382" height="674"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4JV-gq-gKs" firstAttribute="top" secondItem="Mhm-Lc-ja7" secondAttribute="bottom" constant="16" id="0Ar-oa-An2"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="4JV-gq-gKs" secondAttribute="trailing" constant="16" id="UMD-g0-KWB"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="bottom" secondItem="4JV-gq-gKs" secondAttribute="bottom" constant="16" id="VgT-jw-Odr"/>
+                            <constraint firstItem="Mhm-Lc-ja7" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="Zzx-sE-Ug9"/>
+                            <constraint firstItem="Mhm-Lc-ja7" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" id="ie2-ID-rER"/>
+                            <constraint firstItem="Mhm-Lc-ja7" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="mgt-F9-p7G"/>
+                            <constraint firstItem="4JV-gq-gKs" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="16" id="rh8-Rn-Kd7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="u20-9c-OId" id="rg6-aA-9bR"/>
+                        <outlet property="contentLabel" destination="4JV-gq-gKs" id="mfx-iu-pmA"/>
+                        <outlet property="usernameLabel" destination="oxQ-jA-laL" id="yos-pw-tLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="ReviewDetailsModuleInitializer" customModule="ViperApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

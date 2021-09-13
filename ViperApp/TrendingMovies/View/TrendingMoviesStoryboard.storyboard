@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trending Movies View Controller-->
+        <scene sceneID="Qop-4A-WvQ">
+            <objects>
+                <viewController storyboardIdentifier="TrendingMoviesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gvj-Ek-alL" customClass="TrendingMoviesViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tDE-6L-EFc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Z3-gi-BmV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wZF-kS-y6c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ikB-Sp-nWh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Uw-UV-80o">
+                                <rect key="frame" x="0.0" y="808" width="414" height="88"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nYW-uW-5bU">
+                                        <rect key="frame" x="65" y="16" width="284" height="32"/>
+                                        <segments>
+                                            <segment title="Trending"/>
+                                            <segment title="Coming"/>
+                                            <segment title="Now playing"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="stateChanged:" destination="gvj-Ek-alL" eventType="valueChanged" id="Pfp-OK-noG"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="nYW-uW-5bU" firstAttribute="top" secondItem="4Uw-UV-80o" secondAttribute="top" constant="16" id="XZn-Xv-83R"/>
+                                    <constraint firstAttribute="trailing" secondItem="nYW-uW-5bU" secondAttribute="trailing" constant="65" id="dzU-aQ-GuZ"/>
+                                    <constraint firstAttribute="height" constant="88" id="eVU-28-ALy"/>
+                                    <constraint firstItem="nYW-uW-5bU" firstAttribute="leading" secondItem="4Uw-UV-80o" secondAttribute="leading" constant="65" id="t3n-8J-xci"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WlU-gr-gmk"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4Uw-UV-80o" secondAttribute="bottom" id="5hk-fJ-Xf7"/>
+                            <constraint firstItem="ikB-Sp-nWh" firstAttribute="top" secondItem="WlU-gr-gmk" secondAttribute="top" id="6VJ-nn-p0U"/>
+                            <constraint firstItem="4Uw-UV-80o" firstAttribute="leading" secondItem="WlU-gr-gmk" secondAttribute="leading" id="6fq-Hv-o1j"/>
+                            <constraint firstItem="6Z3-gi-BmV" firstAttribute="leading" secondItem="WlU-gr-gmk" secondAttribute="leading" id="8uO-92-hK4"/>
+                            <constraint firstItem="4Uw-UV-80o" firstAttribute="top" secondItem="wZF-kS-y6c" secondAttribute="bottom" constant="8" symbolic="YES" id="C54-ha-0Qp"/>
+                            <constraint firstItem="wZF-kS-y6c" firstAttribute="trailing" secondItem="WlU-gr-gmk" secondAttribute="trailing" id="N5c-TB-nTA"/>
+                            <constraint firstItem="wZF-kS-y6c" firstAttribute="leading" secondItem="WlU-gr-gmk" secondAttribute="leading" id="U41-l3-9kA"/>
+                            <constraint firstItem="wZF-kS-y6c" firstAttribute="top" secondItem="WlU-gr-gmk" secondAttribute="top" id="WdD-B4-4QG"/>
+                            <constraint firstItem="ikB-Sp-nWh" firstAttribute="trailing" secondItem="WlU-gr-gmk" secondAttribute="trailing" id="cTu-tZ-N0O"/>
+                            <constraint firstItem="4Uw-UV-80o" firstAttribute="top" secondItem="ikB-Sp-nWh" secondAttribute="bottom" constant="8" symbolic="YES" id="ckk-8s-hgJ"/>
+                            <constraint firstItem="ikB-Sp-nWh" firstAttribute="leading" secondItem="WlU-gr-gmk" secondAttribute="leading" id="eGW-x0-Chm"/>
+                            <constraint firstItem="4Uw-UV-80o" firstAttribute="top" secondItem="6Z3-gi-BmV" secondAttribute="bottom" constant="8" symbolic="YES" id="mGU-m6-vZ7"/>
+                            <constraint firstItem="6Z3-gi-BmV" firstAttribute="top" secondItem="WlU-gr-gmk" secondAttribute="top" id="nVu-OG-ChO"/>
+                            <constraint firstItem="4Uw-UV-80o" firstAttribute="trailing" secondItem="WlU-gr-gmk" secondAttribute="trailing" id="oIE-2k-3OV"/>
+                            <constraint firstItem="6Z3-gi-BmV" firstAttribute="trailing" secondItem="WlU-gr-gmk" secondAttribute="trailing" id="oZK-TK-3bi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playingTableView" destination="6Z3-gi-BmV" id="Ldl-w6-Yhl"/>
+                        <outlet property="soonTableView" destination="wZF-kS-y6c" id="c5j-YI-dpf"/>
+                        <outlet property="trendingTableView" destination="ikB-Sp-nWh" id="wcn-f3-Mct"/>
+                        <outlet property="viewSC" destination="nYW-uW-5bU" id="R7L-85-tQK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLH-uG-dgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

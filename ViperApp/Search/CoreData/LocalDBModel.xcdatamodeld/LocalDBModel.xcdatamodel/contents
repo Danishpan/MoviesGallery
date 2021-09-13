@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="QueryStringEntity" representedClassName="QueryStringEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="query" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="QueryStringEntity" positionX="-54" positionY="-9" width="128" height="44"/>
+    </elements>
+</model>

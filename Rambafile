@@ -1,0 +1,19 @@
+### Headers settings
+company: Dair
+
+### Xcode project settings
+project_name: ViperApp
+xcodeproj_path: ViperApp.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: ViperApp
+
+project_file_path: ViperApp
+
+project_group_path: ViperApp
+
+
+### Templates
+templates:
+- {name: swifty_viper}

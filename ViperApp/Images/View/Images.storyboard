@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Images View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="ImagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="ImagesViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awx-QM-6i1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wkB-w7-gII">
+                                        <rect key="frame" x="129.5" y="9.5" width="155" height="32"/>
+                                        <segments>
+                                            <segment title="Backdrop"/>
+                                            <segment title="Posters"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="stateChanged:" destination="nTq-cw-PKg" eventType="valueChanged" id="yZq-z3-m1h"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="wkB-w7-gII" firstAttribute="centerX" secondItem="Awx-QM-6i1" secondAttribute="centerX" id="hDu-9a-tg3"/>
+                                    <constraint firstItem="wkB-w7-gII" firstAttribute="centerY" secondItem="Awx-QM-6i1" secondAttribute="centerY" id="uvC-3T-04o"/>
+                                    <constraint firstAttribute="height" constant="50" id="vOr-ZX-QoI"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9XT-S0-2j8">
+                                <rect key="frame" x="0.0" y="102" width="414" height="794"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jgr-Ws-ued">
+                                <rect key="frame" x="0.0" y="102" width="414" height="794"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jgr-Ws-ued" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="6iL-tM-U4h"/>
+                            <constraint firstItem="Awx-QM-6i1" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" id="DWc-5e-f9V"/>
+                            <constraint firstItem="9XT-S0-2j8" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="H7Y-Gk-2zi"/>
+                            <constraint firstItem="9XT-S0-2j8" firstAttribute="top" secondItem="Awx-QM-6i1" secondAttribute="bottom" constant="8" symbolic="YES" id="Qgs-5X-ycC"/>
+                            <constraint firstItem="Awx-QM-6i1" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="jhN-3R-vIR"/>
+                            <constraint firstItem="Awx-QM-6i1" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="l7o-78-LIc"/>
+                            <constraint firstAttribute="bottom" secondItem="9XT-S0-2j8" secondAttribute="bottom" id="lg9-cW-OyB"/>
+                            <constraint firstItem="9XT-S0-2j8" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="nbA-B6-KoK"/>
+                            <constraint firstItem="Jgr-Ws-ued" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="peM-E5-sbp"/>
+                            <constraint firstItem="Jgr-Ws-ued" firstAttribute="top" secondItem="Awx-QM-6i1" secondAttribute="bottom" constant="8" symbolic="YES" id="ppT-hX-dfQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Jgr-Ws-ued" secondAttribute="bottom" id="wig-fg-Vt5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backdropsTableView" destination="Jgr-Ws-ued" id="ozx-Cz-Ol3"/>
+                        <outlet property="imagesSC" destination="wkB-w7-gII" id="0XY-Yo-PVW"/>
+                        <outlet property="postersTableView" destination="9XT-S0-2j8" id="ybx-md-hQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="ImagesModuleInitializer" customModule="ViperApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

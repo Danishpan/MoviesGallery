@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nTq-cw-PKg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="2cH-70-FlM">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nTq-cw-PKg" customClass="SearchViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ham-5u-Ebq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="20f-uF-krO">
+                                <rect key="frame" x="16" y="76" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="819-qs-tOb">
+                                <rect key="frame" x="373.5" y="82" width="24.5" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchClicked:" destination="nTq-cw-PKg" eventType="touchUpInside" id="2fw-Ib-lbI"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-Co-YXZ">
+                                <rect key="frame" x="0.0" y="118" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6tE-i5-Ij7">
+                                <rect key="frame" x="0.0" y="118" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ssi-FC-3Ro"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cOj-Co-YXZ" secondAttribute="bottom" id="15t-BY-4uO"/>
+                            <constraint firstItem="6tE-i5-Ij7" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="2WA-Gz-WaZ"/>
+                            <constraint firstItem="6tE-i5-Ij7" firstAttribute="top" secondItem="20f-uF-krO" secondAttribute="bottom" constant="8" symbolic="YES" id="49I-QY-qfW"/>
+                            <constraint firstAttribute="bottom" secondItem="6tE-i5-Ij7" secondAttribute="bottom" id="6XX-dL-WqO"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="819-qs-tOb" secondAttribute="trailing" constant="16" id="Bpv-DB-FL8"/>
+                            <constraint firstItem="Ssi-FC-3Ro" firstAttribute="trailing" secondItem="20f-uF-krO" secondAttribute="trailing" constant="48" id="Vxo-cX-rAg"/>
+                            <constraint firstItem="cOj-Co-YXZ" firstAttribute="top" secondItem="20f-uF-krO" secondAttribute="bottom" constant="8" symbolic="YES" id="auU-98-aq4"/>
+                            <constraint firstItem="20f-uF-krO" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" constant="16" id="kPJ-VI-hxc"/>
+                            <constraint firstItem="6tE-i5-Ij7" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="lNM-fi-0B3"/>
+                            <constraint firstItem="cOj-Co-YXZ" firstAttribute="trailing" secondItem="Ssi-FC-3Ro" secondAttribute="trailing" id="mOP-PT-Qxf"/>
+                            <constraint firstItem="20f-uF-krO" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="32" id="syc-Gu-eQM"/>
+                            <constraint firstItem="cOj-Co-YXZ" firstAttribute="leading" secondItem="Ssi-FC-3Ro" secondAttribute="leading" id="yth-G3-WnO"/>
+                            <constraint firstItem="819-qs-tOb" firstAttribute="top" secondItem="Ssi-FC-3Ro" secondAttribute="top" constant="38" id="z0k-ht-8n0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="queriesTableView" destination="cOj-Co-YXZ" id="FwI-uT-0g6"/>
+                        <outlet property="resultTableView" destination="6tE-i5-Ij7" id="7V6-5s-47H"/>
+                        <outlet property="searchButton" destination="819-qs-tOb" id="aXH-9C-G0Y"/>
+                        <outlet property="searchTextField" destination="20f-uF-krO" id="hau-2l-WeA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqI-SS-yFs" sceneMemberID="firstResponder"/>
+                <customObject id="5Rv-JW-reY" customClass="SearchModuleInitializer" customModule="ViperApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
